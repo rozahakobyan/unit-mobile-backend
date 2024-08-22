@@ -1,0 +1,46 @@
+{
+  "name": "back",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    "import": [
+      "./*.js",
+      "./*.json"
+    ],
+    "require": [
+      "./*.cjs"
+    ]
+  },
+  "scripts": {
+    "start": "nodemon --es-module-specifier-resolution=node -r dotenv/config  app.js",
+    "migrate": "node --es-module-specifier-resolution=node -r dotenv/config migrate.js",
+    "prod": "NODE_ENV=production node --es-module-specifier-resolution=node -r dotenv/config  app.js dotenv_config_path=.env.prod"
+  },
+  "dependencies": {
+    "@vercel/edge-config": "^1.1.1",
+    "axios": "^1.5.1",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-session": "^1.18.0",
+    "form-data": "^4.0.0",
+    "http-errors": "^2.0.0",
+    "https": "^1.0.0",
+    "joi": "^17.11.0",
+    "jsonwebtoken": "^9.0.2",
+    "lodash": "^4.17.21",
+    "md5": "^2.3.0",
+    "multer": "^1.4.5-lts.1",
+    "mysql2": "^3.6.1",
+    "node-cron": "^3.0.3",
+    "nodemailer": "^6.9.7",
+    "nodemon": "^3.0.1",
+    "passport": "^0.7.0",
+    "passport-facebook": "^3.0.0",
+    "sequelize": "^6.37.1",
+    "sharp": "^0.32.6",
+    "uuid": "^9.0.1"
+  }
+}
